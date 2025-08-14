@@ -16,10 +16,23 @@
 
 <body>
 
+    <audio style="display:none"></audio>
 
-    <button onclick="Tone.start();this.style.display = 'none'"><span>CLICK</span> me before anything</button>
+    <main class="before">
+
+        <div class="add-music" onclick="document.querySelector('.add-music input').click()"><span>ADD</span> a music file..
+            <h4>to play/pause use ' <span>=</span> '</h4>
+            <p style="font-size:.9rem">just (.mp3 | .wav | .ogg)</p>
+            <input type="file" style="display:none" accept=".mp3, .wav, .ogg">
+        </div>
+
+        <button onclick="Tone.start();startP()"><h2>CLICK</h2> me before anything</button>
+    
+    </main>
 
     <h1>Controls</h1>
+
+    <div class="record play" onclick="startOrStop()" title="use 'Backspace'"><span></span></div>
 
     <section class="control">
 
@@ -40,20 +53,14 @@
         <div style="width: 100%;">
             <h1>Octave</h1>
             <div class="options" id="opts2">
-                <div class="option" data-num1="0"data-num2="1">0&1</div>
-                <div class="option" data-num1="1"data-num2="2">1&2</div>
-                <div class="option" data-num1="2"data-num2="3">2&3</div>
-                <div class="option" data-num1="3"data-num2="4">3&4</div>
-                <div class="option active" data-num1="4"data-num2="5">4&5</div>
-                <div class="option" data-num1="5"data-num2="6">5&6</div>
-                <div class="option" data-num1="6"data-num2="7">6&7</div>
-                <div class="option" data-num1="7"data-num2="8">7&8</div>
+                <input type="number" value="4" id="num1" min="0" max="7">
+                <input type="number" value="5" id="num2" min="1" max="8">
             </div>
         </div>
 
     </section>
 
-    <main>
+    <main class="after">
         <div class="key" data-ll="a">A</div>
         <span class="key Kw" data-ll="w">W</span>
         <div class="key" data-ll="s">S</div>
@@ -73,10 +80,10 @@
         <div class="key" data-ll=";">;</div>
         <span class="key Kpp" data-ll="[">[</span>
         <div class="key" data-ll="'">'</div>
-        <div class="key" data-ll="enter">E.</div>
+        <div class="key" data-ll="enter" title="Enter">E.</div>
         <span class="key Kppp" data-ll="]">]</span>
         <div class="key" data-ll="4">4</div>
-        <span class="key Kpppp" data-ll="delete">D.</span>
+        <span class="key Kpppp" data-ll="delete" title="Delete">D.</span>
         <div class="key" data-ll="5">5</div>
     </main>
     
