@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Piano</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="ToneJS/Tone.js"></script>
+    <script src="main.js" defer></script>
+
+</head>
+
+<body>
+
+
+    <button onclick="Tone.start();this.style.display = 'none'"><span>CLICK</span> me before anything</button>
+
+    <h1>Controls</h1>
+
+    <section class="control">
+
+        <label for="volumeValue">0 Volume</label>
+        <input type="range" id="volumeValue" min="-55" max="20" value="0">
+
+
+        <div style="width: 100%;">
+            <h1>Type</h1>
+            <div class="options" id="opts1">
+                <div class="option active">sine</div>
+                <div class="option">sawtooth</div>
+                <div class="option">square</div>
+                <div class="option">triangle</div>
+            </div>
+        </div>
+
+        <div style="width: 100%;">
+            <h1>Octave</h1>
+            <div class="options" id="opts2">
+                <div class="option" data-num1="0"data-num2="1">0&1</div>
+                <div class="option" data-num1="1"data-num2="2">1&2</div>
+                <div class="option" data-num1="2"data-num2="3">2&3</div>
+                <div class="option" data-num1="3"data-num2="4">3&4</div>
+                <div class="option active" data-num1="4"data-num2="5">4&5</div>
+                <div class="option" data-num1="5"data-num2="6">5&6</div>
+                <div class="option" data-num1="6"data-num2="7">6&7</div>
+                <div class="option" data-num1="7"data-num2="8">7&8</div>
+            </div>
+        </div>
+
+    </section>
+
+    <main>
+        <div class="key" data-ll="a">A</div>
+        <span class="key Kw" data-ll="w">W</span>
+        <div class="key" data-ll="s">S</div>
+        <span class="key Ke" data-ll="e">E</span>
+        <div class="key" data-ll="d">D</div>
+        <div class="key" data-ll="f">F</div>
+        <span class="key Kt" data-ll="t">T</span>
+        <div class="key" data-ll="g">G</div>
+        <span class="key Ky" data-ll="y">Y</span>
+        <div class="key" data-ll="h">H</div>
+        <span class="key Ku" data-ll="u">U</span>
+        <div class="key" data-ll="j">J</div>
+        <div class="key" data-ll="k">K</div>
+        <span class="key Ko" data-ll="o">O</span>
+        <div class="key" data-ll="l">L</div>
+        <span class="key Kp" data-ll="p">P</span>
+        <div class="key" data-ll=";">;</div>
+        <span class="key Kpp" data-ll="[">[</span>
+        <div class="key" data-ll="'">'</div>
+        <div class="key" data-ll="enter">E.</div>
+        <span class="key Kppp" data-ll="]">]</span>
+        <div class="key" data-ll="4">4</div>
+        <span class="key Kpppp" data-ll="delete">D.</span>
+        <div class="key" data-ll="5">5</div>
+    </main>
+    
+</body>
+
+</html>
+
