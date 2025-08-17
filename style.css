@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+::selection {
+    background: transparent;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background: black;
+    position: relative;
+}
+
+.before {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    transition: .3s;
+}
+
+.add-music {
+    width: 50%;
+    min-width: 300px;
+    background: #5e5e5e;
+    padding: 15px 20px;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: white;
+    transition: .3s;
+}
+
+.add-music:hover {
+    background: #131313;
+}
+
+.add-music span {
+    color: #005e00;
+    text-shadow: 0 0 5px #a6ff00;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #313131;
+    color: white;
+    width: 50%;
+    transition: .5s;
+}
+
+button:hover {
+    background: wheat;
+    color: #009600;
+} button:hover h2 {
+    text-shadow: 0 0 5px #a6ff00;
+}
+
+button h2 {
+    text-shadow: 0 0 5px wheat;
+    transition: .3s;
+}
+
+body > h1 {
+    display: none;
+    opacity: 0;
+    color: white;
+    cursor: default;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    transition: .5s;
+}
+
+h1:hover ~ section {
+    height: 100vh;
+}
+
+h1:hover ~ .record ~ .control ~ .after {opacity:0 !important}
+
+.record {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    background: #4b0000;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    display: none;
+    opacity: 0;
+    transition: .5s;
+}
+
+.record span {
+    width: 15px;
+    height: 15px;
+    background: #d64545;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.play span {border-radius:50%} .stop span {border-radius: 3px}
+
+section {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 0;
+    gap: 5px;
+    display: none;
+    opacity: 0;
+    transition: .5s;
+}
+
+section:hover {
+    height: 100vh;
+}
+
+.control:hover ~ .after {opacity:0 !important}
+
+label {
+    color: white;
+    margin-right: 5px;
+    font-size: 1.3rem;
+}
+
+[type="range"] {
+    display: block;
+    width: 30%;
+    cursor: pointer;
+    accent-color: #525252;
+    outline: none;
+    min-width: 300px;
+}
+
+.options {
+    margin: auto;
+    width: 60%;
+    border-radius: 20px;
+    border: 2px #535353 solid;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 500px;
+}
+
+#opts2 {
+    max-width: 50px;
+}
+
+.options * {
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#opts2 input {
+    outline: 0;
+    border: 0;
+    font-size: 1.3rem;
+    background: white;
+    color: black;
+    padding: 5px;
+    scale: .8;
+}
+
+.option.active, .option:hover {
+    background: #313131;
+}
+
+main {
+    transition: .5s;
+}
+
+.after {
+    margin-top: 10vh;
+    width: 100%;
+    height: 55vh;
+    position: relative;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+}
+
+.key {
+    background: #131313;
+    border: 2px #525252 solid;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: .3s;
+}
+
+.after div {
+    flex-grow: 1;
+    flex-shrink: 1;
+    background: #dbdbdb !important;
+    color: #535353;
+    padding: 10px;
+}
+
+.after span {
+    position: absolute;
+    height: 60%;
+    width: 5%;
+    color: #b8b8b8;
+}
+
+.Kw {left:5%}.Ke{left:12%}.Kt{left:26.5%}.Ky{left:34%}.Ku{left:41%}.Ko{left:55.4%}.Kp{left:62.4%}.Kpp{left:69%}.Kppp{left:83%}.Kpppp{left:90.3%}
+
+.after div.active {
+    transition: .3s;
+    background: #313131 !important;
+    border: 2px white solid;
+    color: white;
+    box-shadow: 0 0 10px white inset;
+}
+
+.after span.active {
+    transition: .3s;
+    background: #535353;
+    border: 2px white solid;
+    color: #131313;
+    box-shadow: 0 0 10px #131313 inset;
+}
+
