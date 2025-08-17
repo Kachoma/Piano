@@ -153,7 +153,7 @@ function startOrStop() {
             a.click();
             canRecord = true;   
             recIcon();
-        }, 3000)
+        }, 1000)
     }
 };
 
