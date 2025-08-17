@@ -89,7 +89,7 @@ function startP() {
         }, 100)
         canPlay = true;
     },300);
-}
+};
 
 function down(l) {
     let note = keysMap[l], el;
@@ -136,7 +136,7 @@ function recIcon() {
         recDiv.classList.remove('stop');
         recDiv.classList.add('play');
     }
-}
+};
 
 function startOrStop() {
     if(canRecord) {
@@ -179,4 +179,9 @@ function startOrStopAudio() {
         state = false;
     };
 };
+
+audio.addEventListener('ended', () => {
+    audio.currentTime = 0;
+    state = false;
+});
 
